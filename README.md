@@ -1,0 +1,2 @@
+# zavrsni
+Sustav upravljanja zaposlenicima
