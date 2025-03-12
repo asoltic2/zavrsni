@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Employee Management</h1>
+
+    <div class="add-item">
+        <h2>Add Employee</h2>
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="lastName" placeholder="Last Name" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="text" id="department" placeholder="Department" />
+        <button onclick="addEmployee()">Add Employee</button>
+    </div>
+
+    <!-- Update form is hidden by default -->
+    <div class="update-item" id="updateForm" style="display: none;">
+        <h2>Update Employee</h2>
+        <input type="number" id="updateId" placeholder="ID" readonly />
+        <input type="text" id="updateFirstName" placeholder="First Name" />
+        <input type="text" id="updateLastName" placeholder="Last Name" />
+        <input type="email" id="updateEmail" placeholder="Email" />
+        <input type="text" id="updateDepartment" placeholder="Department" />
+        <button onclick="updateEmployee()">Update Employee</button>
+        <button onclick="hideUpdateForm()">Cancel</button>
+    </div>
+
+    <div class="employee-list">
+        <h2>Employee List</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
